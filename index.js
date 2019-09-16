@@ -14,13 +14,20 @@ app.use(
 		extended: true,
 	})
 )
-
+//CRUD User
 app.get('/SystemUsers', db.getUsers)
 app.get('/SystemUsers/:id', db.getUserById)
 app.post('/SystemUsers', db.createUser)
 app.put('/SystemUsers/:id', db.updateUser)
 app.delete('/SystemUsers/:id', db.deleteUser)
+//LOGIN
 app.post('/Login', db.Login)
+//CRUD Event
+app.get('/Event', db.getEvents)
+app.get('/Event/:id', db.getEventById)
+app.post('/Event', db.createEvent)
+app.put('/Event/:id', db.updateEvent)
+app.delete('/Event/:id', db.deleteEvent)
 
 app.listen(port,() => {
 	  console.log(`App running on port ${port}.`)
