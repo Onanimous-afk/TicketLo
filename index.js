@@ -28,6 +28,10 @@ app.get('/Event/:id', db.getEventById)
 app.post('/Event', db.createEvent)
 app.put('/Event/:id', db.updateEvent)
 app.delete('/Event/:id', db.deleteEvent)
+//Booking
+app.get('/Booking/History/:id', db.getHistoryBooking)
+app.get('/Booking/Current/:id', db.getCurrentBooking)
+app.post('/Booking', db.createBooking)
 
 app.listen(port,() => {
 	  console.log(`App running on port ${port}.`)
